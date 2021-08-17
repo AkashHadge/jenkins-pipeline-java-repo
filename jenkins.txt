@@ -9,6 +9,7 @@ pipeline {
 		java jenkins
 		'''
 		 //echo 'Fail!'; exit 1
+		 echo 'SUCCESS'
             }
         }
         stage('Test') {
