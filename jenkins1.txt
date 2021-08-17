@@ -1,9 +1,10 @@
 pipeline {
     agent any
     stages {
-  
         stage('Build') {
-	options {
+
+ 
+options {
 
  
 timeout(time: 1, unit: 'MINUTES')
@@ -17,6 +18,12 @@ steps {
  
 input('Do you want to proceed?')
             }
+        }
+
+        stage('If Proceed is clicked')
+	
+         {
+	
             steps {
                 echo 'Building java source code..'
 		sh '''javac Jenkins.java 
